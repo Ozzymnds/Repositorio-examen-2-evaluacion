@@ -12,7 +12,7 @@ public class Ejercicio3 {
 	
 	public static ArrayList<String> t = new ArrayList<String>();
 	
-	public static Scanner sc = new Scanner(System.in);
+	public static Scanner sc = new Scanner(fichero);
 	
 	public static String informacionVideojuegos(String fichero) {
 		File file = new File(fichero);	
@@ -22,12 +22,13 @@ public class Ejercicio3 {
 				String[] lineSep = line.split(",");
 				for(int i = 0; i < lineSep.length; i++) {
 					if(lineSep[i] == lineSep[2]) {
-						t.add(line);
+						t.add(fichero);
 					}
 				}
 			}
+			sc.close();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("No se pudo enconctrar el fichero.");
 		}
 		return fichero;
 	}
