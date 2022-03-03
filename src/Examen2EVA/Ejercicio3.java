@@ -22,7 +22,7 @@ public class Ejercicio3 {
 				String[] lineSep = line.split(",");
 				for(int i = 0; i < lineSep.length; i++) {
 					if(lineSep[i] == lineSep[2]) {
-						t.add(fichero);
+						t.add(file);
 					}
 				}
 			}
